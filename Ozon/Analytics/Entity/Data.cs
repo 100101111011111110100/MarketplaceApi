@@ -50,10 +50,22 @@ internal class Data
     /// <br/>минимум — 1.
     /// </summary>
     [JsonPropertyName("limit")]
-    internal int Limit { get; set; }
+    internal Int64 Limit { get; set; }
+
     /// <summary>
     /// Укажите до 14 метрик.<br/>Если их будет больше, вы получите ошибку с кодом
     /// </summary>
     [JsonPropertyName("metrics")]
-    internal String [] Metrics { get; set; } =[]
+    internal String[] Metrics { get; } = [];
+    /// <summary>
+    /// Количество элементов, которое будет пропущено в ответе.<br/>Например, если offset = 10, то ответ начнётся с 11-го найденного элемента.
+    /// </summary>
+    [JsonPropertyName("offset")]
+    internal Int64 Offset { get; set; }
+    
+    /// <summary>
+    /// Настройки сортировки отчёта.
+    /// </summary>
+    [JsonPropertyName("sort")]
+    internal SortData[] Sort { get; set; } = [];
 }

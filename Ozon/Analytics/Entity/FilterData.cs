@@ -1,5 +1,5 @@
 using System.Text.Json.Serialization;
-
+using Ozon.Analytics.Enums;
 namespace Ozon.Analytics.Entity;
 
 internal class FilterData
@@ -9,14 +9,14 @@ internal class FilterData
     /// Можно передать любой атрибут из параметров BasicGroup,PremiumGroup, и metric, кроме атрибута brand
     /// </summary>
     [JsonPropertyName("key")] 
-    internal string Key { get; set; } = string.Empty;
+    internal string Key { get;} = string.Empty;
     /// <summary>
     /// Default: "EQ"
     /// Операция сравнения
     /// <seealso cref="Comparsion"/>
     /// </summary>
     [JsonPropertyName("op")]
-    internal string Op { get; set; } = string.Empty;
+    internal string Op { get; } = "EQ";
     /// <summary>
     /// Значение для сравнения.
     /// </summary>
