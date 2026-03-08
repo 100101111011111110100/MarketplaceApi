@@ -1,4 +1,4 @@
-using System.Text.Json.Serialization;
+using System.Runtime.Serialization;
 
 namespace Ozon.Analytics.Enums;
 
@@ -7,36 +7,36 @@ public enum PremiumGroup :int
     /// <summary>
     ///  Год
     /// </summary>
-    [JsonPropertyName("year")]
+    [EnumMember(Value = "year")]
     Year,
     /// <summary>
     /// Категория первого уровня
     /// </summary>
-    [JsonPropertyName("category1")]
+    [EnumMember(Value = "category1")]
     Category1,
     /// <summary>
     /// Категория второго уровня
     /// </summary>
-    [JsonPropertyName("")]
+    [EnumMember(Value = "Category2")]
     Category2,
     /// <summary>
     /// Категория третьего уровня
     /// </summary>
-    [JsonPropertyName("category3")]
+    [EnumMember(Value = "category3")]
     Category3,
     /// <summary>
     /// Категория четвертого уровня
     /// </summary>
-    [JsonPropertyName("category4")]
+    [EnumMember(Value = "category4")]
     Category4,
     /// <summary>
     /// Бренд
     /// </summary>
-    [JsonPropertyName("brand")]
+    [EnumMember(Value = "brand")]
     Brand,
     /// <summary>
     /// Модель
     /// </summary>
-    [JsonPropertyName("modelID")]
+    [EnumMember(Value = "modelID")]
     ModelID
 }
